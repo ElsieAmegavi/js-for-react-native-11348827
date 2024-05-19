@@ -1,3 +1,5 @@
+const createUserProfiles = require('./userInfo');
+
 function processArray(arr){
     const result = [];
     for(let i = 0; i < arr.length; i++){
@@ -31,9 +33,12 @@ const resultArray = processArray(realArray);
 const realStrings = ["Black" , "Purple" , "Camo" , "Gold" , "Blue" , "Wine" , "White"];
 const resultStrings = formatArrayStrings(realStrings,realArray);
 
+const userProfiles = createUserProfiles(realStrings,resultStrings);
+
 
 console.log("The real array is:", realArray);
 console.log("The final array is:", resultArray);
 
 console.log("The real strings are: ",realStrings);
 console.log("The result strings are:",resultStrings);
+console.log("User Profiles:",userProfiles);
